@@ -23,10 +23,6 @@ export default class Game {
         container.appendChild(field);
         body.insertBefore(container, body.firstChild);
         this.cells = [...field.children];
-
-        // for (let i=0; i < 16; i++) {
-        //     this.cells[i].addEventListener('click', this.selectCell);
-        // }
     }
 
     randomPosition() {
@@ -60,12 +56,12 @@ export default class Game {
             this.randomPosition();
         }
 
-        intervalId = setInterval(gameLoop.bind(this), 3000);
+        intervalId = setInterval(gameLoop.bind(this), 1000);
 
         this.start = () => {
             this.newField();
             clearInterval(intervalId); 
-            intervalId = setInterval(gameLoop.bind(this), 3000);
+            intervalId = setInterval(gameLoop.bind(this), 1000);
         };
     }
 
@@ -101,19 +97,6 @@ export default class Game {
           });
           console.log('method rabotaet')
     }
-
-
-        //     e.preventDefault();
-        //     let cellDiv = document.querySelector('.cell')
-        // if (cellDiv.hasChildNodes()) {
-        //     this.hit += 1;
-        //     document.getElementsByClassName("hit").innerText = this.hit.toString();
-        //     console.log('popal') 
-        // } else {
-        //     this.miss += 1;
-        //     document.getElementsByClassName("miss").innerText = "GAME OVER: " + this.miss.toString(); 
-        //     console.log('ne popal')
-        //  }
 
     start() {
         this.newField();
