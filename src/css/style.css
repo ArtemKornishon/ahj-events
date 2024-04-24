@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: url("../img/Thor\'s\ Hammer.cur"), default;
+}
+
+
+body {
+	background-color: #240505;
+}
+
+.field {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 800px;
+	height: 80vh;
+	margin: auto;
+}
+
+.cell {
+	width: 20%;
+	height: 20%;
+	box-sizing: border-box;
+	border: 3px solid #505204;
+	border-radius: 50%;
+	margin: 0 20px 10px;
+	background: white;
+}
+
+.goblin {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/goblin.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.container {
+	max-width: 800px;
+	max-height: 800px;
+	margin: 0 auto;
+}
+
+.stats_container {
+	display: flex;
+	flex-direction: column;
+}
+
+.stats {
+	color: red;
+	margin: 0 auto;
+	font-size: 40px;
+	text-shadow:
+		2px 0 black,
+		0 -2px black,
+		-2px 0 black,
+		0 2px black;
+}
